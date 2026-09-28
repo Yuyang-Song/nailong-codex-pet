@@ -111,12 +111,53 @@ The CLI returns **0 on success** and **1 on handled installation errors**, with 
 
 The `running` state means **task processing**. Directional movement has its own two animation rows. The desktop client decides when each animation plays.
 
+### Every animation, in motion
+
+All nine action loops are shown below, followed by the full sixteen-direction gaze cycle. These GIFs are exported from the shipped atlas; preview timing is illustrative and the desktop client controls actual playback.
+
+<table>
+<tr>
+<td align="center"><strong>Idle · 待机</strong><br><img src="docs/previews/idle.gif" width="192" alt="Idle · 待机"><br>Quiet blink / 安静眨眼</td>
+<td align="center"><strong>Run right · 向右跑</strong><br><img src="docs/previews/running-right.gif" width="192" alt="Run right · 向右跑"><br>Alternating strides / 交替迈步</td>
+<td align="center"><strong>Run left · 向左跑</strong><br><img src="docs/previews/running-left.gif" width="192" alt="Run left · 向左跑"><br>Matching leftward cycle / 左向跑动</td>
+</tr>
+<tr>
+<td align="center"><strong>Wave · 挥手</strong><br><img src="docs/previews/waving.gif" width="192" alt="Wave · 挥手"><br>A little hello / 抬手招呼</td>
+<td align="center"><strong>Jump · 跳跃</strong><br><img src="docs/previews/jumping.gif" width="192" alt="Jump · 跳跃"><br>Crouch → leap → land / 蓄力起跳落地</td>
+<td align="center"><strong>Disappointed · 受挫</strong><br><img src="docs/previews/failed.gif" width="192" alt="Disappointed · 受挫"><br>Droop and shrug / 委屈摊手</td>
+</tr>
+<tr>
+<td align="center"><strong>Waiting · 等待</strong><br><img src="docs/previews/waiting.gif" width="192" alt="Waiting · 等待"><br>Expectant clasped hands / 合手等你</td>
+<td align="center"><strong>Working · 工作</strong><br><img src="docs/previews/running.gif" width="192" alt="Working · 工作"><br>Focused thinking / 托腮思考</td>
+<td align="center"><strong>Review · 检查</strong><br><img src="docs/previews/review.gif" width="192" alt="Review · 检查"><br>Lean, tilt, blink / 歪头观察</td>
+</tr>
+</table>
+
+<p align="center"><strong>16-direction gaze · 十六方向视线</strong><br><img src="docs/previews/look.gif" width="192" alt="All sixteen gaze poses, clockwise from up"></p>
+
 <details>
 <summary>View the complete animation sheet</summary>
 
 ![All nine animation states and sixteen gaze directions](docs/animation-sheet.png)
 
 </details>
+
+## Skins and the wardrobe
+
+The installer supports separate skin packages with unique IDs, so installing a new outfit can preserve the classic pet. List the packages actually available in your checkout, then install one:
+
+```bash
+python3 scripts/install.py --list
+python3 scripts/install.py --skin nailong
+```
+
+`--list` outputs JSON for agents. **Currently, only the classic `nailong` skin is installable.** Choose an installed skin from the desktop client's Pets list. This repository does not add a new settings panel inside the client.
+
+New outfits will have their own complete animation and gaze sets, rather than mixing incompatible character frames. See the [skin and motion design brief](docs/SKINS.md) for proposed outfits and their status. Concept art is not an installable skin.
+
+![Proposed outfits: panda opera, armored cultivator, cauldron rider](docs/skin-concepts.png)
+
+*Design exploration only — these three outfits are not released skins.*
 
 ## Small package, inspectable files
 

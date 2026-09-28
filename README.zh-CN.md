@@ -109,12 +109,53 @@ python3 scripts/install.py --replace
 
 `running` 是任务工作状态；桌面上向左、向右移动使用另外两组跑动动画。实际何时播放由客户端决定。
 
+### 全部动作，直接看动图
+
+下面完整展示九种动作，以及全部十六方向视线。动图均从已发布图集导出；预览节奏仅用于展示，客户端决定实际播放时序。
+
+<table>
+<tr>
+<td align="center"><strong>Idle · 待机</strong><br><img src="docs/previews/idle.gif" width="192" alt="Idle · 待机"><br>Quiet blink / 安静眨眼</td>
+<td align="center"><strong>Run right · 向右跑</strong><br><img src="docs/previews/running-right.gif" width="192" alt="Run right · 向右跑"><br>Alternating strides / 交替迈步</td>
+<td align="center"><strong>Run left · 向左跑</strong><br><img src="docs/previews/running-left.gif" width="192" alt="Run left · 向左跑"><br>Matching leftward cycle / 左向跑动</td>
+</tr>
+<tr>
+<td align="center"><strong>Wave · 挥手</strong><br><img src="docs/previews/waving.gif" width="192" alt="Wave · 挥手"><br>A little hello / 抬手招呼</td>
+<td align="center"><strong>Jump · 跳跃</strong><br><img src="docs/previews/jumping.gif" width="192" alt="Jump · 跳跃"><br>Crouch → leap → land / 蓄力起跳落地</td>
+<td align="center"><strong>Disappointed · 受挫</strong><br><img src="docs/previews/failed.gif" width="192" alt="Disappointed · 受挫"><br>Droop and shrug / 委屈摊手</td>
+</tr>
+<tr>
+<td align="center"><strong>Waiting · 等待</strong><br><img src="docs/previews/waiting.gif" width="192" alt="Waiting · 等待"><br>Expectant clasped hands / 合手等你</td>
+<td align="center"><strong>Working · 工作</strong><br><img src="docs/previews/running.gif" width="192" alt="Working · 工作"><br>Focused thinking / 托腮思考</td>
+<td align="center"><strong>Review · 检查</strong><br><img src="docs/previews/review.gif" width="192" alt="Review · 检查"><br>Lean, tilt, blink / 歪头观察</td>
+</tr>
+</table>
+
+<p align="center"><strong>16-direction gaze · 十六方向视线</strong><br><img src="docs/previews/look.gif" width="192" alt="All sixteen gaze poses, clockwise from up"></p>
+
 <details>
 <summary>展开查看完整精灵图预览</summary>
 
 ![九种动作和十六个视线方向](docs/animation-sheet.png)
 
 </details>
+
+## 皮肤与奶龙衣柜
+
+安装器已支持按独立 ID 安装皮肤，方便保留原版并存使用。先列出当前仓库中实际存在的皮肤，再选择安装：
+
+```bash
+python3 scripts/install.py --list
+python3 scripts/install.py --skin nailong
+```
+
+`--list` 输出便于 Agent 读取的 JSON。**目前只有原版 `nailong` 可安装。** 安装后的皮肤通过桌面端现有宠物列表切换；本项目没有向客户端注入新的设置面板。
+
+后续每套皮肤将包含自己的完整动作和视线图集，避免混用不同造型造成跳变。拟定的皮肤与动作方向见[皮肤设计说明](docs/SKINS.md)，概念图不代表已经可安装。
+
+![拟定皮肤：熊猫戏服、玄金战甲、白衣踏鼎](docs/skin-concepts.png)
+
+*仅为造型探索，三套皮肤尚未发布。*
 
 ## 仓库里有什么
 
