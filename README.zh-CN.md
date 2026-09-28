@@ -6,11 +6,11 @@
 
 **把一只会眨眼、挥手、蹦跶的小黄龙，放到你的桌面上。**
 
-适用于支持自定义 v2 宠物的 Codex 桌面端 · 九种动作 · 十六个视线方向 · 透明背景
+适用于支持自定义 v2 宠物的 Codex 桌面端 · 九种动作 · 十六个视线方向 · 透明背景 · **Agent-friendly**
 
 <img src="docs/previews/idle.gif" width="192" alt="奶龙眨眼待机动画"> <img src="docs/previews/waving.gif" width="192" alt="奶龙挥手动画"> <img src="docs/previews/jumping.gif" width="192" alt="奶龙跳跃动画">
 
-[下载安装包](https://github.com/Yuyang-Song/nailong-codex-pet/releases/latest) · [安装方法](#安装) · [全部动作](#它会做什么) · [制作与修改](docs/DEVELOPMENT.md)
+[下载安装包](https://github.com/Yuyang-Song/nailong-codex-pet/releases/latest) · [安装方法](#安装) · [Agent 操作](#agent-friendly让-agent-帮你安装) · [全部动作](#它会做什么) · [制作与修改](docs/DEVELOPMENT.md)
 
 </div>
 
@@ -62,6 +62,35 @@ python3 scripts/install.py --replace
 已有同名宠物时，默认拒绝覆盖。使用 `--replace` 会把旧版本移到 `CODEX_HOME/pet-backups/` 下，并打印备份路径。
 
 **兼容性：** 已核对本项目制作时 macOS 桌面端的本地宠物加载格式；需要客户端支持 `spriteVersionNumber: 2`。其他平台和后续版本尚未实际验证，设置入口也可能随版本变化。安装已在磁盘上验证，尚未通过应用界面自动化验证播放。
+
+## Agent-friendly：让 Agent 帮你安装
+
+**支持让编程 Agent 代你完成安装。** 安装器源码可检查，没有交互式输入，不依赖第三方 Python 包，支持指定安装目录和更新前备份。Agent 需要 Git、Python 3.9+、仓库访问能力，以及写入本地宠物目录的权限。
+
+把下面这段话直接发给你的 Agent：
+
+```text
+帮我安装 https://github.com/Yuyang-Song/nailong-codex-pet 里的奶龙宠物。
+先阅读 README 和 scripts/install.py；已有仓库就复用，否则克隆仓库。
+优先使用 CODEX_HOME，未设置时使用 ~/.codex，然后在仓库目录运行
+python3 scripts/install.py。
+如果已经安装，对比现有 pet.json、spritesheet.webp 与仓库中的两个文件。
+一致就报告已安装；不一致且我已授权更新时，用 --replace 保留备份后更新，
+否则先询问是否更新。安装后核对两个文件与源文件一致，告诉我安装路径
+以及可能产生的备份路径，最后提醒我在桌面端刷新宠物列表并选择「奶龙」。
+```
+
+Agent 在仓库根目录执行：
+
+```bash
+python3 scripts/install.py
+# 明确指定安装目录时：
+python3 scripts/install.py --codex-home /path/to/codex
+# 更新已有版本时：
+python3 scripts/install.py --replace
+```
+
+命令成功时退出码为 **0**，已处理的安装错误返回 **1** 并输出原因。完成后应逐字节或用 SHA-256 对比安装文件与 `pet/nailong/` 内的源文件，不能仅凭目录存在判断成功。安装器会输出目标路径和实际产生的备份路径。选中宠物仍需在桌面端完成；文件复制成功不等于已经验证应用内播放。
 
 ## 它会做什么
 

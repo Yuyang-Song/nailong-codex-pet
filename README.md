@@ -4,13 +4,13 @@
 
 **A little yellow companion for your next big idea.**
 
-Nine animated states · Sixteen gaze directions · Transparent v2 spritesheet
+Nine animated states · Sixteen gaze directions · Transparent v2 spritesheet · **Agent-friendly**
 
 **English** · [简体中文](README.zh-CN.md)
 
 <img src="docs/previews/idle.gif" width="192" alt="Nailong blinking quietly"> <img src="docs/previews/waving.gif" width="192" alt="Nailong waving hello"> <img src="docs/previews/jumping.gif" width="192" alt="Nailong jumping">
 
-[Download](https://github.com/Yuyang-Song/nailong-codex-pet/releases/latest) · [Install](#install) · [Animations](#meet-your-companion) · [Contribute](docs/DEVELOPMENT.md)
+[Download](https://github.com/Yuyang-Song/nailong-codex-pet/releases/latest) · [Install](#install) · [Agent setup](#agent-friendly-setup) · [Animations](#meet-your-companion) · [Contribute](docs/DEVELOPMENT.md)
 
 </div>
 
@@ -62,6 +62,37 @@ python3 scripts/install.py --replace
 An existing `nailong` installation is never overwritten by default. With `--replace`, the previous version is moved into `CODEX_HOME/pet-backups/`, and its location is printed.
 
 **Compatibility:** this package's layout was checked against the macOS desktop client's local loader during creation. The client must support `spriteVersionNumber: 2`. Other platforms and future client versions have not been tested; settings labels can change. Installation was verified on disk, not through an automated in-app playback test.
+
+## Agent-friendly setup
+
+**Let your coding agent handle installation.** The repository provides an inspectable Python installer with no interactive prompts or third-party dependencies, an explicit destination option, and optional replacement backups. An agent needs Git, Python 3.9+, access to this repository, and permission to write to your local pets directory.
+
+Copy this prompt into your agent:
+
+```text
+Install the Nailong pet from https://github.com/Yuyang-Song/nailong-codex-pet.
+Read the README and scripts/install.py first. Reuse an existing checkout if
+available; otherwise clone the repository. Respect CODEX_HOME, falling back
+to ~/.codex, and run python3 scripts/install.py from the checkout.
+If Nailong is already installed, compare its two files with this package.
+If they match, report it as already installed. If they differ and I have
+authorized an update, use --replace to preserve a backup; otherwise ask
+whether I want to update. Verify the installed pet.json and spritesheet.webp
+match the source files, then report the install path and any backup path.
+Remind me to refresh the desktop app's Pets settings and select 奶龙.
+```
+
+For agents operating from the repository root:
+
+```bash
+python3 scripts/install.py
+# With an explicitly chosen destination:
+python3 scripts/install.py --codex-home /path/to/codex
+# When updating an existing installation:
+python3 scripts/install.py --replace
+```
+
+The CLI returns **0 on success** and **1 on handled installation errors**, with a readable message. Verify both installed files against `pet/nailong/` using byte comparison or SHA-256; an existing folder alone does not prove a successful install. The installer prints the destination and, when applicable, the backup path. Pet selection remains a step in the desktop app; a successful copy does not verify in-app playback.
 
 ## Meet your companion
 
