@@ -1,0 +1,33 @@
+{
+  "verdict": "pass",
+  "visual_qa": "pass",
+  "reviewed_by": "final_qa",
+  "identity": "All eleven rows retain the same rounded yellow dinosaur, cream belly, brown eyes, short limbs, tail, and smooth toy material.",
+  "directions": "All 16 explicit verdicts recorded in direction-semantics.json; cardinal and quadrant checks pass.",
+  "warnings": [
+    "022.5 rightward component is subtle; blind ambiguity accepted because labeled native-size poses progress coherently from up toward upper-right.",
+    "Jumping is modestly smaller to reserve ascent space; crouch/ascent/apex/descent/landing are intact.",
+    "157.5 to 180 and 337.5 to 000 are pixel-difference outliers, with minor pose-family change but no conspicuous registration/scale jump or identity loss."
+  ],
+  "boundaries": {
+    "157.5->180": "Down-right moves to centered down, without quadrant reversal. Belly and planted feet remain stable; head change is modest and readable.",
+    "337.5->000": "Up-left moves to centered up; chin remains raised and scale/baseline remain stable."
+  },
+  "holes": "Rows y200/201 fall within the natural bottom-of-feet gap. High-contrast final-cell inspection shows complete toes and no interior cut seam or horizontal body band.",
+  "standard_rows": {
+    "idle": "pass: visible blink, calm posture",
+    "running-right": "pass: right facing and alternating cadence",
+    "running-left": "pass: all eight repaired final cells and regenerated GIF frames inspected; complete attached tails, no sliver, left facing and alternating stride preserved",
+    "waving": "pass: arm pose wave without effects",
+    "jumping": "pass: crouch, rise, apex, descent and recovery with stable extraction",
+    "failed": "pass: lowered head, frown and shrug",
+    "waiting": "pass: expectant clasped hands and asking gesture",
+    "running": "pass: focused thinking hand-to-chin sequence",
+    "review": "pass: calm focused head/eye shifts and blink"
+  },
+  "chroma": "Final despill ok true and v2 validation pass; chroma QA closed.",
+  "inspection_method": "Native-size direction sheet, final contact sheet, all nine GIF frame sequences, high-contrast final boundary and feet crop.",
+  "repair_resolution": "Deterministic frame-preserving mirror repair removed frame-5 detached tail sliver; regenerated final atlas and preview inspected independently. Mirror report confirms direction pixels unchanged.",
+  "repair_rows": [],
+  "remaining_major_issues": []
+}

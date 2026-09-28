@@ -1,0 +1,274 @@
+[
+  {
+    "full_name": "LC606mob/codex-yellow-reviewer-pet",
+    "html_url": "https://github.com/LC606mob/codex-yellow-reviewer-pet",
+    "created_at": "2026-05-03T08:07:42Z",
+    "pushed_at": "2026-05-03T08:11:24Z",
+    "fork": false,
+    "default_branch": "main",
+    "license": "NOASSERTION",
+    "root_files": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "pets",
+      "qa"
+    ],
+    "oldest_of_first_100_commits": {
+      "sha": "45d3f8e91096e09d98207eb4ddb10b6f1826bee6",
+      "html_url": "https://github.com/LC606mob/codex-yellow-reviewer-pet/commit/45d3f8e91096e09d98207eb4ddb10b6f1826bee6",
+      "committer_date": "2026-05-03T08:03:57Z"
+    },
+    "commits_fetched": 1
+  },
+  {
+    "full_name": "ZUNGJYU-dotcom/codex-nailong-pet",
+    "html_url": "https://github.com/ZUNGJYU-dotcom/codex-nailong-pet",
+    "created_at": "2026-07-10T12:17:27Z",
+    "pushed_at": "2026-07-11T14:00:25Z",
+    "fork": false,
+    "default_branch": "main",
+    "license": "NOASSERTION",
+    "root_files": [
+      "LICENSE-CODE",
+      "NOTICE.md",
+      "README.md",
+      "codex-nailong-pet-v2-abstract.zip",
+      "codex-nailong-pet-v3-laughing.zip",
+      "codex-nailong-pet-v4-milk-frog-showtime.zip",
+      "contact-sheet.png",
+      "look-directions.png",
+      "pet.json",
+      "preview-idle.gif",
+      "spritesheet.webp",
+      "v2-abstract",
+      "v3-laughing",
+      "v4-milk-frog-showtime",
+      "validation.json"
+    ],
+    "oldest_of_first_100_commits": {
+      "sha": "4c99259663bd38c5b2c26cee698a26c12e39162c",
+      "html_url": "https://github.com/ZUNGJYU-dotcom/codex-nailong-pet/commit/4c99259663bd38c5b2c26cee698a26c12e39162c",
+      "committer_date": "2026-07-10T12:30:53Z"
+    },
+    "commits_fetched": 13
+  },
+  {
+    "full_name": "erich207/nailong-codex-pet",
+    "html_url": "https://github.com/erich207/nailong-codex-pet",
+    "created_at": "2026-07-13T06:50:22Z",
+    "pushed_at": "2026-07-13T14:09:09Z",
+    "fork": false,
+    "default_branch": "main",
+    "license": "MIT",
+    "root_files": [
+      "LICENSE",
+      "NOTICE.md",
+      "README.md",
+      "contact-sheet.png",
+      "look-directions.png",
+      "pet.json",
+      "run-summary.json",
+      "spritesheet.webp",
+      "validation-installed.json",
+      "validation-repo.json"
+    ],
+    "oldest_of_first_100_commits": {
+      "sha": "7244a83aaabc6e0b55f473097ee10f0e7d69d6d8",
+      "html_url": "https://github.com/erich207/nailong-codex-pet/commit/7244a83aaabc6e0b55f473097ee10f0e7d69d6d8",
+      "committer_date": "2026-07-13T13:22:52Z"
+    },
+    "commits_fetched": 10
+  },
+  {
+    "full_name": "li2631026381-alt/nailong-codex-pet",
+    "html_url": "https://github.com/li2631026381-alt/nailong-codex-pet",
+    "created_at": "2026-08-03T01:01:32Z",
+    "pushed_at": "2026-08-03T01:01:39Z",
+    "fork": false,
+    "default_branch": "main",
+    "license": null,
+    "root_files": [
+      "README.md",
+      "pet.json",
+      "spritesheet.webp"
+    ],
+    "oldest_of_first_100_commits": {
+      "sha": "f809173fa54a38ac33b0fca4dfe739a863b8b7ef",
+      "html_url": "https://github.com/li2631026381-alt/nailong-codex-pet/commit/f809173fa54a38ac33b0fca4dfe739a863b8b7ef",
+      "committer_date": "2026-08-03T01:01:10Z"
+    },
+    "commits_fetched": 1
+  },
+  {
+    "full_name": "Tomorins/nailong-codex-pet",
+    "html_url": "https://github.com/Tomorins/nailong-codex-pet",
+    "created_at": "2026-08-08T21:01:13Z",
+    "pushed_at": "2026-08-08T23:45:32Z",
+    "fork": false,
+    "default_branch": "main",
+    "license": null,
+    "root_files": [
+      ".gitattributes",
+      ".gitignore",
+      "ASSET-USAGE.md",
+      "CHANGELOG.md",
+      "NOTICE.md",
+      "README.md",
+      "assets",
+      "output",
+      "tools"
+    ],
+    "oldest_of_first_100_commits": {
+      "sha": "e76c26ba9d4f0de2b2a34c01697dde5e7578bccb",
+      "html_url": "https://github.com/Tomorins/nailong-codex-pet/commit/e76c26ba9d4f0de2b2a34c01697dde5e7578bccb",
+      "committer_date": "2026-08-08T21:01:00Z"
+    },
+    "commits_fetched": 2
+  },
+  {
+    "full_name": "FBBer/codex-milk-dragon-pet",
+    "html_url": "https://github.com/FBBer/codex-milk-dragon-pet",
+    "created_at": "2026-08-09T04:19:31Z",
+    "pushed_at": "2026-08-09T05:12:36Z",
+    "fork": false,
+    "default_branch": "main",
+    "license": "NOASSERTION",
+    "root_files": [
+      ".gitattributes",
+      ".github",
+      ".gitignore",
+      "ASSET-NOTICE.md",
+      "LICENSE-CODE.md",
+      "README.md",
+      "SHA256SUMS",
+      "pet.json",
+      "preview",
+      "qa",
+      "release",
+      "scripts",
+      "spritesheet.webp"
+    ],
+    "oldest_of_first_100_commits": {
+      "sha": "62cf7ccf250f33dadedb7bea5e0808084fdf6928",
+      "html_url": "https://github.com/FBBer/codex-milk-dragon-pet/commit/62cf7ccf250f33dadedb7bea5e0808084fdf6928",
+      "committer_date": "2026-08-09T04:19:18Z"
+    },
+    "commits_fetched": 6
+  },
+  {
+    "full_name": "mmexile/nailong-pet",
+    "html_url": "https://github.com/mmexile/nailong-pet",
+    "created_at": "2026-05-12T08:31:28Z",
+    "pushed_at": "2026-05-15T09:01:34Z",
+    "fork": false,
+    "default_branch": "main",
+    "license": null,
+    "root_files": [
+      ".gitignore",
+      "CMakeLists.txt",
+      "README.md",
+      "align_content.py",
+      "align_frames.py",
+      "align_smile_frames.py",
+      "assets",
+      "compute_body_bbox.py",
+      "nailong-pet-release.zip",
+      "nailong-pet-release",
+      "nailong_debug.txt",
+      "nailong_time.txt",
+      "normalize_assets.py",
+      "rename.py",
+      "src"
+    ],
+    "oldest_of_first_100_commits": {
+      "sha": "39a8216854624235cf181090c3c6a73513982826",
+      "html_url": "https://github.com/mmexile/nailong-pet/commit/39a8216854624235cf181090c3c6a73513982826",
+      "committer_date": "2026-05-12T08:29:05Z"
+    },
+    "commits_fetched": 12
+  },
+  {
+    "full_name": "2002yxy/dsh-nailong-desktop-pet",
+    "html_url": "https://github.com/2002yxy/dsh-nailong-desktop-pet",
+    "created_at": "2026-08-14T13:45:16Z",
+    "pushed_at": "2026-08-14T17:08:35Z",
+    "fork": false,
+    "default_branch": "main",
+    "license": "MIT",
+    "root_files": [
+      ".gitignore",
+      "CHANGELOG.md",
+      "COMPATIBILITY.md",
+      "LICENSE",
+      "README.md",
+      "README.zh.md",
+      "RELEASE_NOTES.md",
+      "RELEASING.md",
+      "SECURITY.md",
+      "THIRD_PARTY_NOTICES.md",
+      "cordis.patch.yml",
+      "lib",
+      "native",
+      "package.json",
+      "release",
+      "scripts",
+      "skills",
+      "src",
+      "tests"
+    ],
+    "oldest_of_first_100_commits": {
+      "sha": "3cd979c71ff3043746bac1e9b622e3bfdf498474",
+      "html_url": "https://github.com/2002yxy/dsh-nailong-desktop-pet/commit/3cd979c71ff3043746bac1e9b622e3bfdf498474",
+      "committer_date": "2026-08-14T13:45:06Z"
+    },
+    "commits_fetched": 3
+  },
+  {
+    "full_name": "nkxingxh/NailongDetection",
+    "html_url": "https://github.com/nkxingxh/NailongDetection",
+    "created_at": "2024-10-28T05:01:51Z",
+    "pushed_at": "2024-11-02T13:08:20Z",
+    "fork": false,
+    "default_branch": "main",
+    "license": "AGPL-3.0",
+    "root_files": [
+      ".gitattributes",
+      "LICENSE",
+      "README.md",
+      "images"
+    ],
+    "oldest_of_first_100_commits": {
+      "sha": "6f97ca40930174708ffa21ef24eca17d136ec776",
+      "html_url": "https://github.com/nkxingxh/NailongDetection/commit/6f97ca40930174708ffa21ef24eca17d136ec776",
+      "committer_date": "2024-10-28T04:57:34Z"
+    },
+    "commits_fetched": 37
+  },
+  {
+    "full_name": "ZreXoc/nailong-classification",
+    "html_url": "https://github.com/ZreXoc/nailong-classification",
+    "created_at": "2024-10-06T16:00:51Z",
+    "pushed_at": "2024-12-27T05:00:47Z",
+    "fork": false,
+    "default_branch": "master",
+    "license": null,
+    "root_files": [
+      ".gitignore",
+      "Figure_1.png",
+      "Figure_2.png",
+      "README.md",
+      "img",
+      "out",
+      "train.py",
+      "train.sh",
+      "vali.py"
+    ],
+    "oldest_of_first_100_commits": {
+      "sha": "03a31a6a420ba223c67c311857622efdb0d0eb5f",
+      "html_url": "https://github.com/ZreXoc/nailong-classification/commit/03a31a6a420ba223c67c311857622efdb0d0eb5f",
+      "committer_date": "2024-10-06T16:03:11Z"
+    },
+    "commits_fetched": 8
+  }
+]
