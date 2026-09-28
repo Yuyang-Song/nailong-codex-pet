@@ -2,6 +2,8 @@
 
 The character reference and animation poses were generated with Codex built-in image generation as an unofficial interpretation of Nailong (奶龙). No official character-art files were supplied. The resulting strips were extracted, registered, cleaned and composed into the published atlas; previews are derived from that final asset.
 
+The imperial skin designs combine the same Nailong interpretation with user-requested Shi Hao / Perfect World and Ye Fan / Shrouding the Heavens themes. They are unofficial fan interpretations, not official character models or collaborations. Long hair, uncovered serious faces, costumes, props, spatial-rift action and Chinese captions were generated for this project. Related character, title and quotation rights are outside the MIT grant as well.
+
 The MIT license covers original utility code, documentation text and configuration contributions. It does not grant rights to Nailong character imagery, names, trademarks, or other third-party material, and does not license the spritesheet and previews as unrestricted commercial stock assets. Public availability is not evidence of ownership or permission from the character rights holder.
 
 For commercial use, redistribution of character artwork, or other derivative uses, confirm any required permissions with the relevant rights holders. This project cannot grant their rights. It is not an official release or an endorsed project.
@@ -16,7 +18,9 @@ For provenance corrections or rights concerns, contact the maintainer through a 
 
 本项目的主形象与动画姿势通过 Codex 内置 image_gen 生成，主题为奶龙（Nailong）。未使用官方提供的角色原画文件。随后进行了确定性的拆帧、镜像、透明背景清理、精灵图排版和视觉检查。
 
-`pet/nailong/spritesheet.webp` 是最终可安装的栅格素材；`docs/` 下的 PNG 和 GIF 由该素材导出。公开这些文件不代表本项目拥有奶龙角色的全部权利，也不意味着图片没有第三方权利限制。
+各皮肤目录内的 `spritesheet.webp` 是可安装的栅格素材；动作预览由对应图集导出，另有明确标注的造型草案。公开这些文件不代表本项目拥有奶龙角色的全部权利，也不意味着图片没有第三方权利限制。
+
+帝境皮肤按用户创意，结合石昊／《完美世界》和叶凡／《遮天》的主题，保留奶龙本体，并生成长发、露出的肃穆脸部、服装、道具、空间裂隙动作与中文题字。它们是非官方同人演绎，并非官方模型或联名；相关角色、作品名称和台词的第三方权利也不属于 MIT 授权范围。
 
 ## MIT 的适用范围
 

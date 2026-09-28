@@ -1,0 +1,11 @@
+{
+  "standard_qa": "pass",
+  "repair_rows": [],
+  "reviewed_by": "independent-worker",
+  "motion_review": "Ordered frames, representative native frames and GIF timing; image viewer only exposes static GIF frames.",
+  "notes": "Stern uncovered face, hair, robe and cauldron consistent; all9 actions readable, no clipping. Signature cauldron growth/text intentional. Small magenta fragment running-left04 to recheck after despill.",
+  "warnings": [
+    "Native signature840ms; final caption280ms",
+    "Precleanup chroma deferred to final deterministic pass"
+  ]
+}

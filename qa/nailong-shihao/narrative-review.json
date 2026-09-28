@@ -1,0 +1,14 @@
+{
+  "row": "jumping",
+  "reviewed_by": "parent",
+  "verdict": "pass",
+  "method": "stable-slots",
+  "user_requested_exceptions": [
+    "narrative effects",
+    "Chinese text",
+    "deliberate size change or disappearance"
+  ],
+  "observed": "All five cells correctly separated: sword preparation, cut slit, partial entry, absent character with slit, final complete 独断万古. Smaller fourth-cell occupancy is intentional disappearance, not missing content.",
+  "caption_exact": true,
+  "remaining_limit": "Five-frame 840 ms native cycle; package cannot lengthen it."
+}

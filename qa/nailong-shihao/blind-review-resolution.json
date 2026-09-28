@@ -1,0 +1,8 @@
+{
+  "severity": "minor",
+  "decision": "accept_with_warning",
+  "direction": "337.5",
+  "blind_evidence": "Three reviewers found horizontal axis ambiguous; vertical up has two of three votes. Both cardinal pairs pass.",
+  "labeled_evidence": "Independent labeled review: nose/mouth slightly left of head/body midline, raised chin and upper eye placement. Left component weaker than315, ordered left to up-left to near-up to up has no reversal.",
+  "continuity": "Independent review found y200 gaps open between feet/beside sword tip, not body cuts. Metric changes at row boundaries reviewed with stable body registration."
+}

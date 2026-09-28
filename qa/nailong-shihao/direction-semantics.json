@@ -1,0 +1,117 @@
+{
+  "reviewed_by": "independent-final-visual-review",
+  "directions": [
+    {
+      "angle": "000",
+      "expected": "up",
+      "observed": "up",
+      "verdict": "pass",
+      "reason": "Centered symmetric face and nose; raised chin, exposed lower muzzle and high pupils aim up."
+    },
+    {
+      "angle": "022.5",
+      "expected": "up-right",
+      "observed": "up-right",
+      "verdict": "pass",
+      "reason": "Nose and face turn right; raised muzzle and upward pupils."
+    },
+    {
+      "angle": "045",
+      "expected": "up-right",
+      "observed": "up-right",
+      "verdict": "pass",
+      "reason": "Projecting muzzle and eye aim right; elevated chin and upper eye placement."
+    },
+    {
+      "angle": "067.5",
+      "expected": "up-right",
+      "observed": "up-right",
+      "verdict": "pass",
+      "reason": "Strong right profile; slight chin lift and elevated eye distinguish from090."
+    },
+    {
+      "angle": "090",
+      "expected": "right",
+      "observed": "right",
+      "verdict": "pass",
+      "reason": "Nose projects screen-right of head center and pupils aim right; near-level face."
+    },
+    {
+      "angle": "112.5",
+      "expected": "down-right",
+      "observed": "down-right",
+      "verdict": "pass",
+      "reason": "Right-facing muzzle; head lowers and eye line tips down relative to090."
+    },
+    {
+      "angle": "135",
+      "expected": "down-right",
+      "observed": "down-right",
+      "verdict": "pass",
+      "reason": "Nose and eyes right; lowered muzzle, compressed chin and increased crown visibility show down."
+    },
+    {
+      "angle": "157.5",
+      "expected": "down-right",
+      "observed": "down-right",
+      "verdict": "pass",
+      "reason": "Small rightward face turn; bowed head and downward eye line dominate."
+    },
+    {
+      "angle": "180",
+      "expected": "down",
+      "observed": "down",
+      "verdict": "pass",
+      "reason": "Nose and bowed face centered over torso; exposed crown, lowered muzzle and downward eyelids."
+    },
+    {
+      "angle": "202.5",
+      "expected": "down-left",
+      "observed": "down-left",
+      "verdict": "pass",
+      "reason": "Nose and lowered face shift left; strong bow and compressed lower face."
+    },
+    {
+      "angle": "225",
+      "expected": "down-left",
+      "observed": "down-left",
+      "verdict": "pass",
+      "reason": "Left-projecting face and pupils; lowered chin and downward eye line."
+    },
+    {
+      "angle": "247.5",
+      "expected": "down-left",
+      "observed": "down-left",
+      "verdict": "pass",
+      "reason": "Left profile; head and muzzle lower than270, modest down component."
+    },
+    {
+      "angle": "270",
+      "expected": "left",
+      "observed": "left",
+      "verdict": "pass",
+      "reason": "Nose projects screen-left of head center, pupil aims left; near-level muzzle."
+    },
+    {
+      "angle": "292.5",
+      "expected": "up-left",
+      "observed": "up-left",
+      "verdict": "pass",
+      "reason": "Left-facing nose and eye; lifted chin and higher eye line."
+    },
+    {
+      "angle": "315",
+      "expected": "up-left",
+      "observed": "up-left",
+      "verdict": "pass",
+      "reason": "Leftward muzzle and pupil; raised chin and upward gaze."
+    },
+    {
+      "angle": "337.5",
+      "expected": "up-left",
+      "observed": "near-front up with subtle left component",
+      "verdict": "warning",
+      "reason": "Nose/mouth slightly screen-left of head/body midline; left cue weak at normal size. High chin and upper pupils clearly up.315 to337.5 to000 closes without reversal."
+    }
+  ]
+}

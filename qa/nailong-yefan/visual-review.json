@@ -1,0 +1,10 @@
+{
+  "visual_qa": "pass_with_warnings",
+  "qa_note": "Independent review of ordered contact sheets, all nine state sequences, direction sheet and GIF frame/timing metadata. Unmasked stern face, black hair, gold robe and bronze cauldron preserve identity. No blocking repairs. Real-time desktop playback was not verified.",
+  "review_warnings": [
+    "157.5 to180:1835 differing pixels, center delta4.72px, area ratio1.052. Visual sequence retains downward pitch and continuous yaw; stable robe and cauldron, no conspicuous scale jump.",
+    "337.5 leftward cue subtle; closure to000 coherent.",
+    "Jumping intentionally grows cauldron; final caption hold280ms, total840ms."
+  ],
+  "repair_rows": []
+}

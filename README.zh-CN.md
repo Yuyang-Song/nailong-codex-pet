@@ -142,20 +142,51 @@ python3 scripts/install.py --replace
 
 ## 皮肤与奶龙衣柜
 
-安装器已支持按独立 ID 安装皮肤，方便保留原版并存使用。先列出当前仓库中实际存在的皮肤，再选择安装：
+新增两套帝境皮肤，保留原版。两者都有**长发、完全露出的脸、紧闭的嘴和肃穆眼神，不戴面具、不大笑**。
+
+| 皮肤 | 下载 | 安装 ID |
+| --- | --- | --- |
+| 石昊 · 独断万古 | [ZIP](https://github.com/Yuyang-Song/nailong-codex-pet/releases/latest/download/nailong-shihao.zip) | `nailong-shihao` |
+| 叶凡 · 天帝镇世 | [ZIP](https://github.com/Yuyang-Song/nailong-codex-pet/releases/latest/download/nailong-yefan.zip) | `nailong-yefan` |
+| 原版奶龙 | [ZIP](https://github.com/Yuyang-Song/nailong-codex-pet/releases/latest/download/nailong.zip) | `nailong` |
+
+解压后，将对应名称的皮肤文件夹放入宠物目录。每套独立 ID，可与原版并存；也可在仓库目录执行：
 
 ```bash
 python3 scripts/install.py --list
-python3 scripts/install.py --skin nailong
+python3 scripts/install.py --skin nailong-shihao
+python3 scripts/install.py --skin nailong-yefan
 ```
 
-`--list` 输出便于 Agent 读取的 JSON。**目前只有原版 `nailong` 可安装。** 安装后的皮肤通过桌面端现有宠物列表切换；本项目没有向客户端注入新的设置面板。
+更新已有皮肤时加 `--replace`，安装器会先备份。安装后在客户端现有宠物列表里切换。
 
-后续每套皮肤将包含自己的完整动作和视线图集，避免混用不同造型造成跳变。拟定的皮肤与动作方向见[皮肤设计说明](docs/SKINS.md)，概念图不代表已经可安装。
+**本地衣柜预览：** 下载或克隆完整仓库，在浏览器打开 [`preview.html`](preview.html)，即可选皮肤、选动作、慢放、暂停、切换深浅背景。这些控制只改变预览，不会向客户端注入设置面板。GitHub 页面展示的是 HTML 源码，需要在本地打开才能运行。
 
-![拟定皮肤：熊猫戏服、玄金战甲、白衣踏鼎](docs/skin-concepts.png)
+### 招牌动画：慢放看清楚
 
-*仅为造型探索，三套皮肤尚未发布。*
+石昊持剑斩开空间裂隙，进入后消失，最后留下 **「独断万古」**。叶凡脚下的鼎逐渐变大，最后出现 **「我为天帝，当镇压世间一切敌」**。
+
+**下面两张是明确慢放的展示动图。** 核对版本的客户端 `jumping` 槽位只有五帧，共 **840 毫秒**，末帧台词只停留 **280 毫秒**。皮肤包不能改客户端速度，也不能新增“大招”触发事件。下方完整动作表使用原速。
+
+<table><tr><th>独断万古</th><th>我为天帝，当镇压世间一切敌</th></tr><tr><td><img src="docs/previews/nailong-shihao/signature-slow.gif" width="288" alt="Slowed signature sequence: nailong-shihao"></td><td><img src="docs/previews/nailong-yefan/signature-slow.gif" width="288" alt="Slowed signature sequence: nailong-yefan"></td></tr></table>
+
+### 两套皮肤的全部动作
+
+<table>
+<tr><th>Action / 动作</th><th>独断万古 · Shi Hao</th><th>天帝镇世 · Ye Fan</th></tr>
+<tr><td>Idle · 待机</td><td align="center"><img src="docs/previews/nailong-shihao/idle.gif" width="192" alt="nailong-shihao: Idle · 待机"></td><td align="center"><img src="docs/previews/nailong-yefan/idle.gif" width="192" alt="nailong-yefan: Idle · 待机"></td></tr>
+<tr><td>Move right · 向右移动</td><td align="center"><img src="docs/previews/nailong-shihao/running-right.gif" width="192" alt="nailong-shihao: Move right · 向右移动"></td><td align="center"><img src="docs/previews/nailong-yefan/running-right.gif" width="192" alt="nailong-yefan: Move right · 向右移动"></td></tr>
+<tr><td>Move left · 向左移动</td><td align="center"><img src="docs/previews/nailong-shihao/running-left.gif" width="192" alt="nailong-shihao: Move left · 向左移动"></td><td align="center"><img src="docs/previews/nailong-yefan/running-left.gif" width="192" alt="nailong-yefan: Move left · 向左移动"></td></tr>
+<tr><td>Greeting · 招呼</td><td align="center"><img src="docs/previews/nailong-shihao/waving.gif" width="192" alt="nailong-shihao: Greeting · 招呼"></td><td align="center"><img src="docs/previews/nailong-yefan/waving.gif" width="192" alt="nailong-yefan: Greeting · 招呼"></td></tr>
+<tr><td>Signature, native timing · 大招原速</td><td align="center"><img src="docs/previews/nailong-shihao/jumping.gif" width="192" alt="nailong-shihao: Signature, native timing · 大招原速"></td><td align="center"><img src="docs/previews/nailong-yefan/jumping.gif" width="192" alt="nailong-yefan: Signature, native timing · 大招原速"></td></tr>
+<tr><td>Setback · 受挫</td><td align="center"><img src="docs/previews/nailong-shihao/failed.gif" width="192" alt="nailong-shihao: Setback · 受挫"></td><td align="center"><img src="docs/previews/nailong-yefan/failed.gif" width="192" alt="nailong-yefan: Setback · 受挫"></td></tr>
+<tr><td>Waiting · 等待</td><td align="center"><img src="docs/previews/nailong-shihao/waiting.gif" width="192" alt="nailong-shihao: Waiting · 等待"></td><td align="center"><img src="docs/previews/nailong-yefan/waiting.gif" width="192" alt="nailong-yefan: Waiting · 等待"></td></tr>
+<tr><td>Working · 工作</td><td align="center"><img src="docs/previews/nailong-shihao/running.gif" width="192" alt="nailong-shihao: Working · 工作"></td><td align="center"><img src="docs/previews/nailong-yefan/running.gif" width="192" alt="nailong-yefan: Working · 工作"></td></tr>
+<tr><td>Review · 检查</td><td align="center"><img src="docs/previews/nailong-shihao/review.gif" width="192" alt="nailong-shihao: Review · 检查"></td><td align="center"><img src="docs/previews/nailong-yefan/review.gif" width="192" alt="nailong-yefan: Review · 检查"></td></tr>
+<tr><td>16-direction gaze · 十六方向</td><td align="center"><img src="docs/previews/nailong-shihao/look.gif" width="192" alt="nailong-shihao: 16-direction gaze · 十六方向"></td><td align="center"><img src="docs/previews/nailong-yefan/look.gif" width="192" alt="nailong-yefan: 16-direction gaze · 十六方向"></td></tr>
+</table>
+
+更多设计与兼容限制见[皮肤说明](docs/SKINS.md)。
 
 ## 仓库里有什么
 

@@ -1,0 +1,14 @@
+{
+  "row": "jumping",
+  "reviewed_by": "parent",
+  "verdict": "pass",
+  "method": "stable-slots",
+  "user_requested_exceptions": [
+    "narrative effects",
+    "Chinese text",
+    "deliberate size change or disappearance"
+  ],
+  "observed": "Five cells show cauldron progressively widening under same character; final three-line caption 我为天帝 / 当镇压世间 / 一切敌. Native text is small but legible on contact strip; slow preview will help reading.",
+  "caption_exact": true,
+  "remaining_limit": "Five-frame 840 ms native cycle; package cannot lengthen it."
+}

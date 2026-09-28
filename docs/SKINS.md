@@ -1,55 +1,24 @@
-# Nailong wardrobe — design brief
+# Nailong imperial skins / 奶龙帝境皮肤
 
 [English README](../README.md) · [中文 README](../README.zh-CN.md)
 
-## Available now
+Two new skins are packaged alongside Classic Nailong. Each has its own complete v2 atlas and validation records under `qa/<skin-id>/`. Use `scripts/install.py --list` to see installable IDs.
 
-Only **Classic Nailong** (`nailong`) is a finished, installable skin. The installer can discover additional complete packages in `pet/<skin-id>/`, list their IDs with `--list`, and install one with `--skin <skin-id>`. Each package's manifest ID must match its directory name. Separate IDs allow skins to coexist; switching uses the desktop client's existing Pets list.
+| Skin | Identity | Signature sequence |
+| --- | --- | --- |
+| Shi Hao — 独断万古 | Long black hair, uncovered yellow face, narrowed severe eyes, dark gold emperor armor and sword | Charge → cut a spatial rift → enter it → vanish → 独断万古 |
+| Ye Fan — 天帝镇世 | Long black hair, uncovered yellow face, narrowed severe eyes, white/gold robe, feet on bronze cauldron | Cauldron grows step by step → commanding seal → 我为天帝，当镇压世间一切敌 |
 
-## Proposed outfits and motion
+The signature sequence occupies the existing five-frame `jumping` row. It is a short keyframe animation, not a new client action or a timed cutscene API. The checked desktop build plays this row as four 140 ms frames and one 280 ms frame (840 ms total). The package cannot change that timing. The desktop client controls triggering, interruptions and looping. Standard action previews use those durations; a separate `signature-slow.gif` is explicitly slowed for reading the captions. The long Ye Fan caption is split into three lines for readability at native pet size.
 
-These are design proposals, not shipping features or official collaborations. Preserve Nailong's round body, yellow face, eyes, and proportions underneath the costume. Each released skin needs its own nine action loops and sixteen gaze poses, with attached props moving consistently.
+Quiet idle motion keeps the sword or cauldron stable, with breathing, a measured blink and subtle hair movement. Working uses restrained cultivation gestures; waiting and review retain their own task meanings. Both faces remain completely uncovered, with readable eyes and closed, unsmiling mouths.
 
-| Direction | Costume idea | Proposed expressive motion | Status |
-| --- | --- | --- | --- |
-| Panda opera | Mengqi / Pang Da Rong Rong inspired panda hood and opera trim, with Nailong's yellow face visible | Fan greeting, rhythmic step, thoughtful fan-to-chin work pose | Concept exploration |
-| Stern cultivator | Shi Hao / Perfect World inspired compact dark armor, restrained gold trim, attached cape and sword | Controlled sword salute, focused cultivation hand pose, grounded landing | Concept exploration |
-| Cauldron rider | Ye Fan / Shrouding the Heavens inspired robes, feet planted on a compact three-legged bronze cauldron | Gentle cauldron bob, robe follow-through, concentrated hand seal | Concept exploration |
-| “牛来的” | Exact meme/reference still to be identified | To be designed after reference confirmation | Awaiting reference |
-| “牢大” | Basketball-themed Nailong if that is the intended meme; separate from the Honor of Kings theme | Ball-holding focus, greeting, compact celebratory jump | Awaiting clarification |
+The requested signature rows intentionally allow a spatial rift, disappearance, growing cauldron and Chinese lettering. Those are authored scenes rather than extraction defects. Other states maintain stable scale and complete character silhouettes.
 
-The cauldron should remain physically connected to the character silhouette. Effects, robes, swords, and props must fit at native pet size without clipping or obscuring gaze. Avoid detached particles and oversized effects that hide the expression.
+## 中文
 
-## More motion within the client format
+本次只新增石昊、叶凡两套皮肤，保留原版。两者都有长发和肃杀眼神，脸部完全露出，不戴面具，不再使用大笑表情。
 
-The current v2 atlas has fixed state rows and frame counts. Appending a tenth action row does not create a new client event. More variety means authoring new motion for a skin's existing semantic states, or shipping another complete animation variant. Idle remains quiet, working conveys active thought, waiting asks for attention, and review stays distinct. New app-triggered states would need client support beyond this asset repository.
+石昊：蓄势、挥剑斩开空间裂隙、进入、消失，最后出现「独断万古」。叶凡：脚下鼎逐帧变大，最后显示「我为天帝，当镇压世间一切敌」。两段使用现有五帧跳跃槽位，核对的桌面端版本采用前四帧各 140 ms、末帧 280 ms，总计 840 ms，皮肤包无法改速。实际触发和循环由桌面端控制，不新增客户端事件。README 的慢放版本会单独标明，不代表客户端实播速度。文字在小尺寸下的可读性需要逐帧检查。
 
-## Release gate
-
-A concept becomes an installable skin only after its complete atlas exists and passes layout, transparency, identity, motion continuity, and direction review. Generate documentation previews from the exact released asset. Keep unreleased concepts out of `pet/` so the installer cannot offer them as finished skins.
-
-## Reference context
-
-- [Honor of Kings official update: Mengqi and Pang Da Rong Rong](https://www.taptap.cn/moment/140920212215041591)
-- [Perfect World official animation account: Shi Hao battle attire](https://weibo.com/7453780346/5171009100712504)
-- [Shrouding the Heavens official animation feed](https://www.sina.cn/media/7661212901)
-
-These references identify the requested themes; costume translations and motion proposals above are our design ideas. They do not establish official affiliation or asset permissions. See [ASSETS.md](../ASSETS.md).
-
-## 中文说明
-
-“奶龙衣柜”采用独立皮肤包：原版保留，新皮肤各有独立 ID，在客户端已有宠物列表里切换。目前仅原版可安装，表中的其他方向均未完成动画制作。
-
-拟定三条造型路线：梦奇胖达荣荣方向的熊猫戏服、石昊方向的肃杀战甲、叶凡方向的脚踩万物母气鼎。它们都保留奶龙本体，并围绕服装和道具重新设计动作。“牛来的”需要具体梗图或参考链接；“牢大”需要确认是否指篮球梗，不归入王者荣耀角色。
-
-客户端动作槽位固定，因此增加表现力要通过皮肤的完整动作变体实现，不能在图集后随意加行就声称客户端多了技能。每套皮肤完成全部动作、十六方向和检查后，才会出现在可安装列表中。
-
-## Concept sheet / 造型草案
-
-![Three proposed Nailong outfits: panda opera, armored cultivator, cauldron rider](skin-concepts.png)
-
-Left to right: panda opera, stern cultivator, cauldron rider. **Concept art only; none of these three is an installable animated skin yet.** The armor expression still reads cheerful; the next iteration should make it calmer and more severe. Detailed trims and flowing ribbons will need simplification at pet size.
-
-从左到右：熊猫戏服、玄金战甲、白衣踏鼎。**当前仅为造型草案，不是可安装动画皮肤。** 战甲版表情还偏开心，后续应收敛为更沉静肃杀；服装纹饰和飘带在桌宠尺寸下需要简化。
-
-Generated with the built-in image generation tool, using the original Nailong reference for identity. Visual brief: three separated full-body costumes on a warm cream background; preserve the same round yellow body, brown eyes, cream belly and toy-like shading. Panda hood and opera-inspired red/gold trim with a folding fan; compact dark iron/gold cultivation armor with short cape and downward sword; white/gold cultivator robes with both feet on a compact three-legged bronze cauldron. No logos, scene, particles, or text. This is a concept illustration, not an animation atlas.
+每套都制作独立待机、移动、招呼、受挫、等待、工作、检查和十六方向视线，完成检查后才能安装。服装设计属于非官方同人创作，见 [ASSETS.md](../ASSETS.md)。

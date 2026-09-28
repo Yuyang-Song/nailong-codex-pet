@@ -144,20 +144,51 @@ All nine action loops are shown below, followed by the full sixteen-direction ga
 
 ## Skins and the wardrobe
 
-The installer supports separate skin packages with unique IDs, so installing a new outfit can preserve the classic pet. List the packages actually available in your checkout, then install one:
+Two imperial skins join the classic pet. Both have **long black hair, fully uncovered faces, closed unsmiling mouths, and a solemn imperial gaze**.
+
+| Skin | Download | Install ID |
+| --- | --- | --- |
+| Shi Hao — 独断万古 | [ZIP](https://github.com/Yuyang-Song/nailong-codex-pet/releases/latest/download/nailong-shihao.zip) | `nailong-shihao` |
+| Ye Fan — 天帝镇世 | [ZIP](https://github.com/Yuyang-Song/nailong-codex-pet/releases/latest/download/nailong-yefan.zip) | `nailong-yefan` |
+| Classic Nailong | [ZIP](https://github.com/Yuyang-Song/nailong-codex-pet/releases/latest/download/nailong.zip) | `nailong` |
+
+Unzip the selected skin and put its named folder in your pets directory. Each ID is independent, so all three can coexist. Or install from a checkout:
 
 ```bash
 python3 scripts/install.py --list
-python3 scripts/install.py --skin nailong
+python3 scripts/install.py --skin nailong-shihao
+python3 scripts/install.py --skin nailong-yefan
 ```
 
-`--list` outputs JSON for agents. **Currently, only the classic `nailong` skin is installable.** Choose an installed skin from the desktop client's Pets list. This repository does not add a new settings panel inside the client.
+Use `--replace` when updating an existing skin; the installer backs it up first. Select the installed skin in the desktop client's Pets list.
 
-New outfits will have their own complete animation and gaze sets, rather than mixing incompatible character frames. See the [skin and motion design brief](docs/SKINS.md) for proposed outfits and their status. Concept art is not an installable skin.
+**Try the wardrobe locally:** open [`preview.html`](preview.html) from the downloaded/cloned repository in a browser. It includes skin and action selectors, playback speed, pause, and light/dark backgrounds. These are preview controls, not new settings injected into the desktop app. GitHub displays the HTML source; download or clone the full repository to run it.
 
-![Proposed outfits: panda opera, armored cultivator, cauldron rider](docs/skin-concepts.png)
+### Signature scenes — slowed for reading
 
-*Design exploration only — these three outfits are not released skins.*
+Shi Hao opens a spatial rift with his sword, enters it, vanishes, and leaves **独断万古**. Ye Fan's cauldron grows, then the caption reads **我为天帝，当镇压世间一切敌**.
+
+**The following two GIFs are slowed documentation previews.** In the checked desktop build, the existing `jumping` state uses five frames lasting **840 ms total**, including just **280 ms** for the final caption. This asset package cannot change the client timing or add a new ultimate-action trigger. Native-rate previews follow below.
+
+<table><tr><th>独断万古</th><th>我为天帝，当镇压世间一切敌</th></tr><tr><td><img src="docs/previews/nailong-shihao/signature-slow.gif" width="288" alt="Slowed signature sequence: nailong-shihao"></td><td><img src="docs/previews/nailong-yefan/signature-slow.gif" width="288" alt="Slowed signature sequence: nailong-yefan"></td></tr></table>
+
+### Every imperial animation
+
+<table>
+<tr><th>Action / 动作</th><th>独断万古 · Shi Hao</th><th>天帝镇世 · Ye Fan</th></tr>
+<tr><td>Idle · 待机</td><td align="center"><img src="docs/previews/nailong-shihao/idle.gif" width="192" alt="nailong-shihao: Idle · 待机"></td><td align="center"><img src="docs/previews/nailong-yefan/idle.gif" width="192" alt="nailong-yefan: Idle · 待机"></td></tr>
+<tr><td>Move right · 向右移动</td><td align="center"><img src="docs/previews/nailong-shihao/running-right.gif" width="192" alt="nailong-shihao: Move right · 向右移动"></td><td align="center"><img src="docs/previews/nailong-yefan/running-right.gif" width="192" alt="nailong-yefan: Move right · 向右移动"></td></tr>
+<tr><td>Move left · 向左移动</td><td align="center"><img src="docs/previews/nailong-shihao/running-left.gif" width="192" alt="nailong-shihao: Move left · 向左移动"></td><td align="center"><img src="docs/previews/nailong-yefan/running-left.gif" width="192" alt="nailong-yefan: Move left · 向左移动"></td></tr>
+<tr><td>Greeting · 招呼</td><td align="center"><img src="docs/previews/nailong-shihao/waving.gif" width="192" alt="nailong-shihao: Greeting · 招呼"></td><td align="center"><img src="docs/previews/nailong-yefan/waving.gif" width="192" alt="nailong-yefan: Greeting · 招呼"></td></tr>
+<tr><td>Signature, native timing · 大招原速</td><td align="center"><img src="docs/previews/nailong-shihao/jumping.gif" width="192" alt="nailong-shihao: Signature, native timing · 大招原速"></td><td align="center"><img src="docs/previews/nailong-yefan/jumping.gif" width="192" alt="nailong-yefan: Signature, native timing · 大招原速"></td></tr>
+<tr><td>Setback · 受挫</td><td align="center"><img src="docs/previews/nailong-shihao/failed.gif" width="192" alt="nailong-shihao: Setback · 受挫"></td><td align="center"><img src="docs/previews/nailong-yefan/failed.gif" width="192" alt="nailong-yefan: Setback · 受挫"></td></tr>
+<tr><td>Waiting · 等待</td><td align="center"><img src="docs/previews/nailong-shihao/waiting.gif" width="192" alt="nailong-shihao: Waiting · 等待"></td><td align="center"><img src="docs/previews/nailong-yefan/waiting.gif" width="192" alt="nailong-yefan: Waiting · 等待"></td></tr>
+<tr><td>Working · 工作</td><td align="center"><img src="docs/previews/nailong-shihao/running.gif" width="192" alt="nailong-shihao: Working · 工作"></td><td align="center"><img src="docs/previews/nailong-yefan/running.gif" width="192" alt="nailong-yefan: Working · 工作"></td></tr>
+<tr><td>Review · 检查</td><td align="center"><img src="docs/previews/nailong-shihao/review.gif" width="192" alt="nailong-shihao: Review · 检查"></td><td align="center"><img src="docs/previews/nailong-yefan/review.gif" width="192" alt="nailong-yefan: Review · 检查"></td></tr>
+<tr><td>16-direction gaze · 十六方向</td><td align="center"><img src="docs/previews/nailong-shihao/look.gif" width="192" alt="nailong-shihao: 16-direction gaze · 十六方向"></td><td align="center"><img src="docs/previews/nailong-yefan/look.gif" width="192" alt="nailong-yefan: 16-direction gaze · 十六方向"></td></tr>
+</table>
+
+See the [skin design and compatibility notes](docs/SKINS.md).
 
 ## Small package, inspectable files
 

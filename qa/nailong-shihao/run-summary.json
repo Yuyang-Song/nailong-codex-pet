@@ -1,0 +1,11 @@
+{
+  "status": "passed_with_reviewed_warnings",
+  "skin": "nailong-shihao",
+  "standard_states": 9,
+  "look_directions": 16,
+  "blind_axis_consensus": "passed_with_intermediate_warning",
+  "format_validation": "passed",
+  "chroma_cleanup": "passed_once",
+  "mask": false,
+  "desktop_playback_verified": false
+}

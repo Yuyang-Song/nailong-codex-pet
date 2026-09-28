@@ -65,3 +65,23 @@ After a change, run validation, regenerate previews, visually inspect the affect
 ## Release
 
 Build and inspect `dist/nailong.zip`, then attach it and `dist/SHA256SUMS` to a GitHub release. Tag the exact reviewed commit. Keep original code/documentation licensing separate from third-party character rights as described in [ASSETS.md](../ASSETS.md).
+
+## Imperial skins and local preview
+
+Each skin is a complete independent pet in `pet/<skin-id>/`. To validate, export all previews and package a selected skin:
+
+```bash
+python scripts/install.py --list
+python scripts/assets.py validate --skin nailong-shihao
+python scripts/assets.py previews --skin nailong-shihao
+python scripts/assets.py build --skin nailong-shihao
+python scripts/assets.py validate --skin nailong-yefan
+python scripts/assets.py previews --skin nailong-yefan
+python scripts/assets.py build --skin nailong-yefan
+```
+
+Open `preview.html` from the full checkout to select skins, actions, speed and background. It reads the same atlas cells and native action timing. It is a local preview, not a client settings extension. Per-skin QA records live in `qa/<skin-id>/`.
+
+The imperial `jumping` rows deliberately use narrative effects: Shi Hao enters a rift and disappears before the final inscription; Ye Fan's cauldron grows before the final inscription. These were requested exceptions to otherwise stable silhouettes and prop sizes. The checked desktop renderer gives this five-frame state 840 ms (140/140/140/140/280); package metadata cannot extend it. `signature-slow.gif` is explicitly a slower documentation preview. Both faces are uncovered, with long hair and stern expressions.
+
+For a multi-skin release, build all three IDs after final documentation changes, attach every ZIP plus the combined `SHA256SUMS`, and tag the reviewed commit. Each ZIP remains independent; documentation image galleries require the full repository.

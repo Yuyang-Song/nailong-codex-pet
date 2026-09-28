@@ -7,10 +7,11 @@ import json
 from pathlib import Path
 import zipfile
 
+from install import available_skins
+
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-PET = ROOT / "pet" / "nailong"
 STATES = [
     ("idle", [280, 110, 110, 140, 140, 320]),
     ("running-right", [120] * 7 + [220]),
@@ -24,13 +25,14 @@ STATES = [
 ]
 
 
-def validate():
-    meta = json.loads((PET / "pet.json").read_text(encoding="utf-8"))
+def validate(skin="nailong"):
+    pet = ROOT / "pet" / skin
+    meta = json.loads((pet / "pet.json").read_text(encoding="utf-8"))
     if (meta.get("id"), meta.get("spriteVersionNumber"), meta.get("spritesheetPath")) != (
-        "nailong", 2, "spritesheet.webp"
+        skin, 2, "spritesheet.webp"
     ):
         raise ValueError("Unexpected pet identity, sprite version, or file path")
-    with Image.open(PET / "spritesheet.webp") as image:
+    with Image.open(pet / "spritesheet.webp") as image:
         if image.format != "WEBP" or image.size != (1536, 2288) or image.mode != "RGBA":
             raise ValueError("Expected a 1536x2288 RGBA WebP")
         atlas = image.copy()
@@ -47,15 +49,21 @@ def validate():
             used += int(active)
     return atlas, {"ok": True, "width": 1536, "height": 2288, "active_cells": used,
                    "spriteVersionNumber": 2,
-                   "sha256": hashlib.sha256((PET / "spritesheet.webp").read_bytes()).hexdigest()}
+                   "skin": skin,
+                   "sha256": hashlib.sha256((pet / "spritesheet.webp").read_bytes()).hexdigest()}
 
 
-def previews(atlas):
+def previews(atlas, skin="nailong"):
     target = ROOT / "docs" / "previews"
+    if skin != "nailong":
+        target = target / skin
     target.mkdir(parents=True, exist_ok=True)
     sequences = [(name, [(row, col) for col in range(len(times))], times)
                  for row, (name, times) in enumerate(STATES)]
     sequences.append(("look", [(9 + i // 8, i % 8) for i in range(16)], [160] * 16))
+    if skin != "nailong":
+        sequences.append(("signature-slow", [(4, i) for i in range(5)],
+                          [300, 260, 260, 300, 1300]))
     for name, cells, durations in sequences:
         frames = []
         for row, col in cells:
@@ -67,11 +75,12 @@ def previews(atlas):
                        duration=durations, loop=0, disposal=2, optimize=False)
 
 
-def build():
+def build(skin="nailong"):
+    pet = ROOT / "pet" / skin
     target = ROOT / "dist"
     target.mkdir(exist_ok=True)
-    archive = target / "nailong.zip"
-    members = [(PET / name, "nailong/" + name) for name in ("pet.json", "spritesheet.webp")]
+    archive = target / f"{skin}.zip"
+    members = [(pet / name, skin + "/" + name) for name in ("pet.json", "spritesheet.webp")]
     members += [(ROOT / name, name) for name in ("LICENSE", "ASSETS.md", "README.md", "README.zh-CN.md")]
     # Fixed ZIP metadata makes packaging reproducible from identical input files.
     with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED) as output:
@@ -81,20 +90,23 @@ def build():
             info.external_attr = 0o100644 << 16
             output.writestr(info, path.read_bytes())
     digest = hashlib.sha256(archive.read_bytes()).hexdigest()
-    (target / "SHA256SUMS").write_text(f"{digest}  nailong.zip\n", encoding="utf-8")
+    (target / "SHA256SUMS").write_text("".join(
+        f"{hashlib.sha256(path.read_bytes()).hexdigest()}  {path.name}\n"
+        for path in sorted(target.glob("*.zip"))), encoding="utf-8")
     print(f"Built {archive.name}; SHA-256: {digest}")
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", choices=("validate", "previews", "build"))
+    parser.add_argument("--skin", choices=available_skins(), default="nailong")
     args = parser.parse_args()
-    atlas, report = validate()
+    atlas, report = validate(args.skin)
     print(json.dumps(report, indent=2))
     if args.command == "previews":
-        previews(atlas)
+        previews(atlas, args.skin)
     elif args.command == "build":
-        build()
+        build(args.skin)
 
 
 if __name__ == "__main__":
